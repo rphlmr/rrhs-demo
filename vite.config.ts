@@ -4,11 +4,18 @@ import { reactRouterHonoServer } from "react-router-hono-server/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-export default defineConfig({
-	plugins: [
-		reactRouterHonoServer({ serverEntryPoint: "./app/server/index.ts" }),
-		tailwindcss(),
-		reactRouter(),
-		tsconfigPaths(),
-	],
+export default defineConfig(({ mode }) => {
+  console.log(`Vite mode: ${mode}`);
+  return {
+    plugins: [
+      reactRouterHonoServer(
+        mode === "bun"
+          ? { runtime: "bun", serverEntryPoint: "./app/server/index.bun.ts" }
+          : { serverEntryPoint: "./app/server/index.ts" }
+      ),
+      tailwindcss(),
+      reactRouter(),
+      tsconfigPaths(),
+    ],
+  };
 });

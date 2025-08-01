@@ -6,9 +6,9 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "node ./build/server/index.js",
-    "build-bun": "react-router build --config vite.config.bun.ts",
-    "dev-bun": "bunx --bun vite --config vite.config.bun.ts",
-    "start-bun": "bun ./build/server/index.js",
+    "bun:build": "bun react-router build --mode bun",
+    "bun:dev": "bunx --bun vite --mode bun",
+    "bun:start": "bun ./build/server/index.js",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
