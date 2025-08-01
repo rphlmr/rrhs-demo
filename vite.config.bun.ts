@@ -5,10 +5,10 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [
-    reactRouterHonoServer({ runtime: "bun" }),
-    tailwindcss(),
-    reactRouter(),
-    tsconfigPaths(),
-  ],
+	plugins: [
+		reactRouterHonoServer({ runtime: "bun", serverEntryPoint: "./app/server/entry.ts" }),
+		tailwindcss(),
+		reactRouter(),
+		tsconfigPaths(),
+	],
 });
