@@ -13,7 +13,7 @@ pnpm start
 
 ```sh
 bun install
-bun run dev-bun
-bun run build-bun
-bun run start-bun
+pnpm run bun:dev
+pnpm run bun:build
+pnpm run bun:start
 ```

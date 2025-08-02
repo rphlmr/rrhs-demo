@@ -6,19 +6,20 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "node ./build/server/index.js",
-    "build-bun": "react-router build --config vite.config.bun.ts",
-    "dev-bun": "bunx --bun vite --config vite.config.bun.ts",
-    "start-bun": "bun ./build/server/index.js",
+    "bun:build": "bun react-router build --mode bun",
+    "bun:dev": "bunx --bun vite --mode bun",
+    "bun:start": "bun ./build/server/index.js",
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
+    "hono": "^4.8.10",
     "isbot": "^5.1.27",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.7.1",
-    "react-router-hono-server": "https://pkg.pr.new/rphlmr/react-router-hono-server@147"
+    "react-router-hono-server": "^2.18.0"
   },
   "devDependencies": {
     "@react-router/dev": "^7.7.1",
