@@ -19,7 +19,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.7.1",
-    "react-router-hono-server": "https://pkg.pr.new/rphlmr/react-router-hono-server@147"
+    "react-router-hono-server": "^2.18.0"
   },
   "devDependencies": {
     "@react-router/dev": "^7.7.1",
